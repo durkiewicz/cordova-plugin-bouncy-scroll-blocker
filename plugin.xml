@@ -22,7 +22,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/wp8/EmailComposer.cs" />
-        <source-file src="src/wp8/Options.cs" />
+        <source-file src="src/wp/BouncyScrollBlocker.cs" />
     </platform>
 </plugin>
