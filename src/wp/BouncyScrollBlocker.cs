@@ -1,6 +1,7 @@
 using System.Windows;
 using System.Reflection;
 using WPCordovaClassLib;
+using Microsoft.Phone.Controls;
 
 namespace Fi.Avaus.Cordova
 {
@@ -10,8 +11,8 @@ namespace Fi.Avaus.Cordova
 
         public BouncyScrollBlocker()
         {
-            var frame = Application.Current.RootVisual as Microsoft.Phone.Controls.PhoneApplicationFrame;
-            var mainWindow = frame.Content as MainPage;
+            var frame = Application.Current.RootVisual as PhoneApplicationFrame;
+            var mainWindow = frame.Content as PhoneApplicationPage;
             if (mainWindow == null)
             {
                 return;
