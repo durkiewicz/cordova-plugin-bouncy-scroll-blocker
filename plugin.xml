@@ -1,0 +1,28 @@
+<plugin id="fi.avaus.cordova.bouncy-scroll-blocker"
+        version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>BouncyScrollBlocker</name>
+    <description>This is a Cordova plugin that disables the bouncy scroll effect on Windows Phone.</description>
+    <repo>https://github.com/durkiewicz/cordova-plugin-bouncy-scroll-blocker.git</repo>
+
+    <keywords>windows phone, wp8, bouncy scroll</keywords>
+    <license>Apache 2.0</license>
+
+    <author>Avaus Consulting</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="BouncyScrollBlocker">
+                <param name="wp-package" value="BouncyScrollBlocker"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp8/EmailComposer.cs" />
+        <source-file src="src/wp8/Options.cs" />
+    </platform>
+</plugin>
