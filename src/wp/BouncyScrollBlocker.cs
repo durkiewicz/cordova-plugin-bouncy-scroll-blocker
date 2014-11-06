@@ -9,7 +9,7 @@ namespace Fi.Avaus.Cordova
     {
         private const string BMHelper_filed = "bmHelper";
 
-        public BouncyScrollBlocker()
+        public void block()
         {
             var frame = Application.Current.RootVisual as PhoneApplicationFrame;
             var mainWindow = frame.Content as PhoneApplicationPage;
@@ -18,13 +18,13 @@ namespace Fi.Avaus.Cordova
                 return;
             }
 
-            var bmHelper = typeof(CordovaView).GetField(BMHelper_filed, BindingFlags.Instance | BindingFlags.NonPublic).GetValue(mainWindow.CordovaView) as BrowserMouseHelper;
-            if (bmHelper == null)
-            {
-                return;
-            }
-
-            bmHelper.ScrollDisabled = true;
+//            var bmHelper = typeof(CordovaView).GetField(BMHelper_filed, BindingFlags.Instance | BindingFlags.NonPublic).GetValue(mainWindow.CordovaView) as BrowserMouseHelper;
+//            if (bmHelper == null)
+//            {
+//                return;
+//            }
+//
+//            bmHelper.ScrollDisabled = true;
         }
     }
 }

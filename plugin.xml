@@ -15,11 +15,14 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 
+    <js-module src="www/bouncy-scroll-blocker.js" name="BouncyScrollBlocker">
+        <clobbers target="bouncyScrollBlocker" />
+    </js-module>
+
     <platform name="wp8">
         <config-file target="config.xml" parent="/*">
             <feature name="BouncyScrollBlocker">
-                <param name="wp-package" value="BouncyScrollBlocker" />
-                <param name="onload" value="true" />
+                <param name="wp-package" value="BouncyScrollBlocker" onload="true"/>
             </feature>
         </config-file>
 
